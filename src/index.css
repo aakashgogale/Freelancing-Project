@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #1A0A2E;
+  --color-maroon: #8B1A3A;
+  --color-gold: #D4AF37;
+  --color-light-gold: #F5D76E;
+  --color-cream: #FFF8EE;
+  --color-dark-text: #2D1A0E;
+  --color-muted-text: #6B5A4E;
+  --color-white: #FFFFFF;
+  
+  --font-playfair: "Playfair Display", serif;
+  --font-poppins: Poppins, sans-serif;
+}
+
+:root {
+  --primary: #1A0A2E;
+  --maroon: #8B1A3A;
+  --gold: #D4AF37;
+  --light-gold: #F5D76E;
+  --cream: #FFF8EE;
+  --dark-text: #2D1A0E;
+  --muted-text: #6B5A4E;
+  --white: #FFFFFF;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--cream);
+  color: var(--dark-text);
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+}
+
+/* Custom pulse animations for floating buttons */
+@keyframes pulse-green {
+  0% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+  }
+}
+
+@keyframes pulse-maroon {
+  0% {
+    box-shadow: 0 0 0 0 rgba(139, 26, 58, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 15px rgba(139, 26, 58, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(139, 26, 58, 0);
+  }
+}
+
+.animate-pulse-green {
+  animation: pulse-green 2s infinite;
+}
+
+.animate-pulse-maroon {
+  animation: pulse-maroon 2s infinite;
+}
